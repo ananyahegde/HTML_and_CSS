@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<style>
+		.container {
+			display: grid;
+			grid-template-columns: auto auto auto;
+			padding: 10px;
+		}
+		
+		@media (max-width: 768px) {
+			.container {
+				display: grid;
+				grid-template-columns: auto;
+				padding: 10px;
+			}
+		}
+		
+		.container div {
+			background-color: black;
+			color: white;
+			font-size: 30px;
+			padding: 20px;
+			border: 1px solid white;
+			text-align: center;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div> Pride and Prejudice </div>
+		<div> The Hitchhiker's Guide to the Galaxy </div>
+		<div> The Hobbit </div>
+	</div>
+</body>
+
+</html>
