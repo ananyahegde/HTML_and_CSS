@@ -42,8 +42,23 @@ main {
 	margin-bottom: 100px;
 }
 
-section {
+.content {
 	margin-bottom: 50px;
+	display: flex;
+	gap: 20px;
+	flex-direction: row;
+}
+
+@media (max-width: 768px) {
+	.content {
+	display: flex;
+	flex-direction: column;
+	margin-right: 0;
+	}
+}
+
+.content img {
+	width: 300px;
 }
 
 section h1 {
