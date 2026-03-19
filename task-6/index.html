@@ -17,7 +17,10 @@
 			}
 
 			.content {
-				display: none;
+				opacity: 0;
+				visibility: hidden;
+				position: absolute;
+				transition: opacity 1.5s, background-color 3s;
 				max-width: 60%;
 				margin: 50px;
 				padding: 10px;
@@ -26,9 +29,23 @@
 				background-color: #C7C7C2;
 			}
 
-			#raccoons:checked ~ #raccoon-content { display: block; }
-			#hamsters:checked ~ #hamster-content { display: block; }
-			#cats:checked ~ #cat-content { display: block; }
+			#raccoons:checked ~ #raccoon-content { 
+				opacity: 1;
+				visibility: visible;
+				box-shadow: 0 10px 16px 0;
+			}
+			
+			#hamsters:checked ~ #hamster-content { 
+				opacity: 1;
+				visibility: visible; 
+				box-shadow: 0 10px 16px 0;
+			}
+			
+			#cats:checked ~ #cat-content { 
+				opacity: 1;
+				visibility: visible;
+				box-shadow: 0 10px 16px 0;
+			}
 
 		</style>
 	</head>
