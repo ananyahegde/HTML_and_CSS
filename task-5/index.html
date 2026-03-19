@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font-family: Arial;
+			}
+			
+			.container {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+				border: 1px solid black;
+				height: 200px;
+				margin: 20px 600px;
+			}
+
+			label {
+				font-size: 20px;
+			}
+			
+			#popup {
+				display: none;
+			}
+
+			#checkbox:checked ~ #popup {
+				display: block;
+				border: 1px solid black;
+				padding: 10px;
+				margin: 20px;
+			}
+
+			#checkbox{
+				display: none;
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		<h1 style="text-align: center"> Modal Popup using Checkbox Hack </h1>
+			
+		<div class="container">
+			<input type="checkbox" id="checkbox">
+			<label for="checkbox"> Toggle Pop up </label>
+
+			<div id="popup">
+				<p> Hello </p>
+			</div>
+		</div>
+	</body>
+</html>
