@@ -64,6 +64,28 @@
 				color: black;
 			}
 
+			@media (max-width: 768px) {
+				body { background-color: lightblue; }
+				
+				nav ul {
+					overflow: visible;
+					display: flex;
+					flex-direction: column;
+					padding: 10px;
+				}
+
+				nav ul li { padding: 10px; }
+				
+				.dropdown-content {
+					display: none;
+  					position: static;
+					box-shadow: none;
+					background-color: #333333;
+				}
+				
+				.dropdown-content a { color: white; }
+			}
+
 		</style>
 	</head>
 	
