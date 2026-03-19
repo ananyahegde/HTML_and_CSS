@@ -16,8 +16,25 @@
 
 			label {
 				font-size: 20px;
+				z-index: 3;
+				position: relative;
 			}
 			
+			#overlay {
+				position: fixed;
+				inset: 0;
+				background-color: rgba(0,0,0,0.4);
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s, background-color 3s;
+				z-index: 1;
+			}
+
+			#checkbox:checked ~ #overlay {
+				opacity: 1;
+				visibility: visible;
+			}
+		
 			#popup {
 				opacity: 0;
 				visibility: hidden;
@@ -26,13 +43,14 @@
 				padding: 10px;
 				margin: 20px;
 				box-shadow: 10px 10px 5px lightblue;
-				transition: opacity 2s, background-color 3s;
+				transition: opacity 2s;
+				z-index: 2;
 			}
 			
 			#checkbox:checked ~ #popup {
 				opacity: 1;
 				visibility: visible;
-				background-color: rgba(0,0,0,0.1);
+				background-color: white;
 			}
 
 			#checkbox {
@@ -48,7 +66,9 @@
 		<div class="container">
 			<input type="checkbox" id="checkbox">
 			<label for="checkbox"> Click Me! </label>
-
+			
+			<div id="overlay"></div>
+			
 			<div id="popup">
 				<p> Hurricane Hilary was a large and intense Pacific hurricane in August 2023 that brought torrential rainfall to the Pacific Coast of Mexico and the Southwestern United States, resulting in widespread flooding. It was the eighth named storm, sixth hurricane, and fourth major hurricane of the active and highly destructive 2023 Pacific hurricane season. Hilary originated from a tropical wave south of Mexico on August 16, and became a hurricane a day later. It underwent rapid intensification, reaching maximum sustained winds of 140 mph (220 km/h) on August 18, making it a Category 4 storm on the Saffir–Simpson scale. Thousands of people evacuated to shelters as ports closed along the Pacific Coast of Mexico. </p>
 			</div>
