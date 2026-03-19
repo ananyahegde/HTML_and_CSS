@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-nav ul {
-	list-style-type: none;
-	padding: 20px;
-	overflow: hidden;
-	background-color: #333333;
-}
+	<head>
+		<style>
+			body {
+				font-family: Arial;
+			}
 
-nav ul li {
-	float: left;
-}
+			nav ul {
+				list-style-type: none;
+				padding: 20px;
+				overflow: hidden;
+				background-color: #333333;
+			}
 
-nav ul li a {
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
+			nav ul li {
+				float: left;
+			}
 
-</style>
-</head>
+			a {
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
 
-<body>
-	<nav>
-		<ul>
-  			<li><a href="home/"> Home </a></li>
-  			<li><a href="explore/"> Explore </a></li>
-			<div class="dropdown">
-				<a href="shop/"> Shop </a>
+			.dropbtn {
+				border: none;
+				outline: none;
+				background-color: inherit;
+				font-family: inherit;
+				font-size: inherit;
+				color: white;
+			}
+
+			.dropdown-content {
+				display: none;
+			}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<nav>
+			<ul>
+				<li> <a href="#"> Home </a> </li>
+				<li> <a href="#"> Browse </a> </li>
+				<li class="dropdown">
+					<button class="dropbtn"> Shop </button>
 					<div class="dropdown-content">
 						<a href="#"> Electronics </a>
-  						<a href="#"> Personal Health </a>
-  						<a href="#"> Clothing </a>
+						<a href="#"> Clothing </a>
 					</div>
-			</div>
-		</ul>
-	</nav>
-</body>
+				</li>
+			</ul>
+		</nav>
+	</body>
 </html>
