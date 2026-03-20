@@ -1,0 +1,46 @@
+body {
+	font-family: Arial;
+	background-color: #CFCFE7;
+}
+
+.accordion {
+	max-width: 600px;
+	margin: 100px auto;
+	background-color: #343468;
+	border: 1px solid white;
+	border-radius: 6px;
+	box-shadow: 0 10px 16px 0 #151529;
+}
+
+.accordion div input { 
+	display: none;
+}
+
+.accordion div label {
+	color: #CFCFE7;
+	font-size: 20px;
+	font-weight: 500;
+	cursor: pointer;
+	display: block;
+	padding: 20px;
+}
+
+.accordion div span {
+	float: right;
+	padding-right: 20px;
+}
+
+.accordion div div {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	background-color: #EEEEF6;
+}
+
+.accordion div input:checked + div {
+	opacity: 1;
+	max-height: 500px;
+	padding: 20px;
+	transition: max-height 1s ease, opacity 1s ease, padding 1s ease;
+}
+
