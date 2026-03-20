@@ -1,11 +1,59 @@
-.container {
+.img-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	border: 0.3px solid grey;
+	text-align: center;
 }
 
-.img-container { 
+input {
+	display: inline;
 	margin: 10px;
 }
+
+.img-container img {
+	opacity: 0;
+	visibility: hidden;
+	border-radius: 6px;
+	box-shadow: 0 20px 26px 0 rgba(0,0,0,0.5);
+	transition: transform 1.5s ease, opacity 1s;
+	transform: scale(1) scaleX(1) scaleY(1);
+	transform-origin: top left;
+}
+
+.btn {
+	display: flex;
+	flex-direction: row;
+}
+
+#r2:checked ~ .img-container #img2 {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.4) scaleX(1.4) scaleY(1.4);
+}
+
+#r3:checked ~ .img-container #img3 {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.4) scaleX(1.4) scaleY(1.4);
+}
+
+#r4:checked ~ .img-container #img4 {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.4) scaleX(1.4) scaleY(1.4);
+}
+
+#r6:checked ~ .img-container #img6 {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.4) scaleX(1.4) scaleY(1.4);
+}
+
+
+#r7:checked ~ .img-container #img7 {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.4) scaleX(1.4) scaleY(1.4);
+}
+
