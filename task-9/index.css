@@ -1,4 +1,4 @@
-.header {grid-area: header}
+.header {grid-area: header;}
 .navbar { grid-area: nav; }
 .left-sidebar { grid-area: left; }
 .main { grid-area: main; }
@@ -9,7 +9,6 @@
 	display: grid;
 	grid-template-columns: 30% 40% 30%;
 	grid-template-rows: auto auto 1fr auto;
-	
 	grid-template-areas:
 		"header header header"
 		"nav nav nav"
@@ -21,3 +20,117 @@
 	display: grid;
 	grid-template-rows: 33% 33% 33%;
 }
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.navbar ul {
+	display: flex;
+	flex-direction: row-reverse;
+	padding: 20px;
+	gap: 40px;
+	list-style-type: none;
+	background-color: #333333;
+	cursor: pointer;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+.left-sidebar {
+	height: 35%;
+	width: 15%;
+	position: fixed;
+	z-index: 1;
+	top: 180px;
+	left: 100px;
+	border-radius: 10px;
+	background-color: #E7E7E7;
+}
+
+.left-sidebar a {
+	text-decoration: none;
+	font-size: 20px;
+	display: block;
+	color: black;
+	margin-left: 50px;
+	margin-top: 30px;
+	gap: 20px;
+}
+
+.main .item {}
+
+.main .item .more {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.main .item input { display: none; }
+
+.main .item .overlay {
+  opacity: 0;
+  visibility: hidden;
+} 
+
+.right-sidebar {
+	position: sticky;
+	top: 0;
+}
+
+.right-sidebar .suggested-profiles {
+	display: flex;
+	gap: 40px;
+	margin-bottom: 60px;
+}
+
+.right-sidebar .suggested-profiles .profile-item {
+	padding: 20px;
+	border: 0.3px solid grey;
+	border-radius: 6px;
+	background-color: #E7E7E7;
+}
+
+.right-sidebar .suggested-profiles .profile-item img {
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
+}
+
+.right-sidebar .trending {
+	background-color: #E7E7E7;
+	width: 420px;
+	padding: 14px;
+	padding-left: 30px;
+	border-radius: 10px;
+}
+
+.right-sidebar .trending hr {
+	border: none;
+	border-top: 1px solid #c0c0c0;
+	margin: 8px 0;
+}
+
+.right-sidebar .trending p {
+	color: #333333;
+	font-size: 14px;
+}
+
+.right-sidebar .trending a.tag {
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.trending-item {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.trending-item p { margin: 0; }
