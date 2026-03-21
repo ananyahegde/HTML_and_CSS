@@ -3,7 +3,6 @@
 .left-sidebar { grid-area: left; }
 .main { grid-area: main; }
 .right-sidebar { grid-area: right; }
-.footer { grid-area: footer; }
 
 .page {
 	display: grid;
@@ -13,12 +12,11 @@
 		"header header header"
 		"nav nav nav"
 		"left main right"
-		"footer footer footer";
 }
 
 .main {
 	display: grid;
-	grid-template-rows: 33% 33% 33%;
+	grid-template-rows: auto;
 }
 
 .header {
@@ -44,11 +42,11 @@
 }
 
 .left-sidebar {
-	height: 35%;
-	width: 15%;
-	position: fixed;
+	height: 25%;
+	width: 45%;
+	position: sticky;
 	z-index: 1;
-	top: 180px;
+	top: 20px;
 	left: 100px;
 	border-radius: 10px;
 	background-color: #E7E7E7;
@@ -64,6 +62,10 @@
 	gap: 20px;
 }
 
+.main .item {
+  position: relative;
+}
+
 .main .item .more {
   display: flex;
   justify-content: center;
@@ -73,16 +75,40 @@
 .main .item input { display: none; }
 
 .main .item .overlay {
-  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+	opacity: 0;
   visibility: hidden;
+	background: rgba(0,0,0,0.8);
+	padding: 20px;
+	border-radius: 10px;
+	z-index: 9999;
 } 
 
-.main .item input:checked + .overlay {
-  opacity: 1;
-  visibility: visible;
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: white;
+  padding: 30px;
+	max-height: 80vh;
+	overflow-y: auto;
+	border-radius: 10px;
+  max-width: 600px;
 }
 
-.right-sidebar {
+.main .item input:checked ~ .overlay {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(0,0,0,0.4);
+}
+
+	.right-sidebar {
 	position: sticky;
 	top: 0;
 }
