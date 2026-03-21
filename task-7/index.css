@@ -1,9 +1,14 @@
-.img-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+.wrapper { text-align: center; }
+
+.container {
+	position: relative;
+}
+
+.img-container img {
+	position: absolute;
+	top: 20%;
+	left: 35%;
+	z-index: 1;
 }
 
 input {
@@ -11,14 +16,14 @@ input {
 	margin: 10px;
 }
 
+label { cursor: pointer; }
+
 .img-container img {
 	opacity: 0;
 	visibility: hidden;
-	border-radius: 6px;
+	border-radius: 0;
 	box-shadow: 0 20px 26px 0 rgba(0,0,0,0.5);
-	transition: transform 1.5s ease, opacity 1s;
-	transform: scale(1) scaleX(1) scaleY(1);
-	transform-origin: top left;
+	transition: transform 0.5s ease, opacity 0.5s;
 }
 
 .btn {
@@ -26,34 +31,34 @@ input {
 	flex-direction: row;
 }
 
-#r2:checked ~ .img-container #img2 {
+#r2:checked ~ .container .img-container #img2 {
 	opacity: 1;
 	visibility: visible;
-	transform: scale(1.4) scaleX(1.4) scaleY(1.4);
+	z-index: 10;
 }
 
-#r3:checked ~ .img-container #img3 {
+#r3:checked ~ .container .img-container #img3 {
 	opacity: 1;
 	visibility: visible;
-	transform: scale(1.4) scaleX(1.4) scaleY(1.4);
+	z-index: 10;
 }
 
-#r4:checked ~ .img-container #img4 {
+#r4:checked ~ .container .img-container #img4 {
 	opacity: 1;
 	visibility: visible;
-	transform: scale(1.4) scaleX(1.4) scaleY(1.4);
+	z-index: 10;
 }
 
-#r6:checked ~ .img-container #img6 {
+#r6:checked ~ .container .img-container #img6 {
 	opacity: 1;
 	visibility: visible;
-	transform: scale(1.4) scaleX(1.4) scaleY(1.4);
+	z-index: 10;
 }
 
 
-#r7:checked ~ .img-container #img7 {
+#r7:checked ~ .container .img-container #img7 {
 	opacity: 1;
 	visibility: visible;
-	transform: scale(1.4) scaleX(1.4) scaleY(1.4);
+	z-index: 10;
 }
 
