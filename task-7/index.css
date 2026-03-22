@@ -16,10 +16,18 @@ input {
 	margin: 10px;
 }
 
+input#play { display: none; }
+
 label { cursor: pointer; }
+
+label[for="play"] {
+	margin: 0 auto;
+	font-size: 30px;
+}
 
 .img-container img {
 	opacity: 0;
+	margin-top: 80px;
 	visibility: hidden;
 	border-radius: 0;
 	box-shadow: 0 20px 26px 0 rgba(0,0,0,0.5);
@@ -61,4 +69,40 @@ label { cursor: pointer; }
 	visibility: visible;
 	z-index: 10;
 }
+
+
+/* Animations using @keyframes */
+
+@keyframes fadeInOut {
+    0% { 
+			opacity: 1; 
+			visibility: visible; 
+			transform: translateX(-20px) scale(0.8);
+		}
+    
+		10%  {
+			opacity: 1; 
+			transform: translateX(0px) scale(1);
+		}
+		
+		20%  { 
+			opacity: 1;
+			transform: translateX(20px) scale(0.8);
+		}
+		
+		25% { 
+		opacity: 0; 
+		visibility: hidden;
+	}
+    100% { 
+		opacity: 0; 
+	}
+}
+
+#play:checked ~ .container .img-container #img2 { animation: fadeInOut 20s 1 0s; }
+#play:checked ~ .container .img-container #img3 { animation: fadeInOut 20s 1 4s; }
+#play:checked ~ .container .img-container #img4 { animation: fadeInOut 20s 1 8s; }
+#play:checked ~ .container .img-container #img6 { animation: fadeInOut 20s 1 12s; }
+#play:checked ~ .container .img-container #img7 { animation: fadeInOut 20s 1 16s; }
+
 
