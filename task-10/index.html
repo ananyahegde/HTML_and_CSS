@@ -5,21 +5,28 @@
 	</head>
 	
 	<body>
-		<div class="header"> 
-			<p> Words that echo </p>
-      <h1 id="brand-name"> <i> poiesis </i> </h1>
-			<p> Verses that stay </p>
-		</div>
-
+		
 		<div class="page">
-			<div class="left-sidebar"> 
+	    
+      <!-- Header -->
+      <div class="header"> 
+        <p> Words that echo </p>
+        <h1 id="brand-name"> <i> poiesis </i> </h1>
+        <p> Verses that stay </p>
+      </div>
+
+
+      <!-- Sticky side navigation bar -->
+      <div class="left-sidebar"> 
         <a href="#"> Home </a>
         <a href="#explore"> Explore </a>
 				<a href="#profile"> Profile </a>
 				<a href="#more"> More </a>
 			</div>
 
-			<div class="main"> 
+
+		  <!-- Home Page -->
+      <section id="home" class="main"> 
 				<div class="item">
           <h1> Silhouette </h1>
           <h3> - Cyan Galaxy </h3>
@@ -39,6 +46,7 @@
             So we can just laugh<br>
             And say it's nothing.<br>
             <br>
+          </p>
 				</div>
 				
 				<div class="item">
@@ -64,7 +72,7 @@
 
         <div class="item">
           <h1> Pretender </h1>
-          <h3> </h3>
+          <h3> - HIGH </h3>
           <p>
             My love story with you<br>
             It went just as expected<br>
@@ -82,11 +90,12 @@
             I wish I could convey my love But since its useless to hope
           </p>
         </div>
-      </div>
+      </section>
 
 
-			<div class="right-sidebar"> 
-				<h3> Profiles for you </h3>
+      <!-- Explore Page -->
+			<section id="explore" class="main"> 
+        <h3> Profiles for you </h3>
 				<div class="suggested-profiles"> 
 					<div class="profile-item">
 						<img src="./assets/profile1.png">
@@ -131,9 +140,22 @@
 						<p> 8k Likes </p>
 					</div>
 				</div>
-			</div>
+			</section>
 
-      <div class="footer" style="background-color: #E7E7E7;"> 
+
+      <!-- Profile Page -->
+      <section id="profile" class="main">
+        <h3> Your Profile </h3>
+        <div class="profile-container">
+          <img src="./assets/pfp.jpg" id="pfp" alt="profile picture">
+          <p id="name"> Toothless </p>
+          <p id="username"> toothless_dragon </p>
+          <p id="joined"> Joined on 13, March, 2022 </p>
+        </div>
+      </section>
+      
+
+      <div class="footer">
         <div class="footer-row">
           <ul>
             <li><a href="#">Contact us</a></li>
@@ -142,7 +164,7 @@
             <li><a href="#">Terms & Conditions</a></li>
             <li><a href="#">Career</a></li>
           </ul>
-          <p style="margin-left: 200px;"> Poiesis Copyright © 2026 || All rights reserved </p>
+          <p> Poiesis Copyright © 2026 || All rights reserved </p>
         </div>
       </div>
 
