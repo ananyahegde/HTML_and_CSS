@@ -1,0 +1,132 @@
+.header {grid-area: header;}
+.left-sidebar { grid-area: left; }
+.main { grid-area: main; }
+.right-sidebar { grid-area: right; }
+
+.page {
+	display: grid;
+	grid-template-columns: 30% 40% 30%;
+	grid-template-rows: auto auto 1fr auto;
+	grid-template-areas:
+		"header header header"
+		"left main right"
+		"footer footer footer";
+}
+
+.header {
+	background-color: #E7E7E7;
+	padding: 20px 0;
+	margin-bottom: 20px;
+}
+
+.main {
+	display: grid;
+	grid-template-rows: auto;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.left-sidebar {
+	height: 20%;
+	width: 45%;
+	position: sticky;
+	z-index: 1;
+	top: 20px;
+	left: 100px;
+	border-radius: 10px;
+	background-color: #E7E7E7;
+}
+
+.left-sidebar a {
+	text-decoration: none;
+	font-size: 20px;
+	display: block;
+	color: black;
+	margin-left: 50px;
+	margin-top: 30px;
+	gap: 20px;
+}
+
+.main .item {
+  position: relative;
+}
+
+	.right-sidebar {
+	position: sticky;
+	top: 0;
+}
+
+.right-sidebar .suggested-profiles {
+	display: flex;
+	gap: 40px;
+	margin-bottom: 60px;
+}
+
+.right-sidebar .suggested-profiles .profile-item {
+	padding: 20px;
+	border: 0.3px solid grey;
+	border-radius: 6px;
+	background-color: #E7E7E7;
+}
+
+.right-sidebar .suggested-profiles .profile-item img {
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
+}
+
+.right-sidebar .trending {
+	background-color: #E7E7E7;
+	width: 420px;
+	padding: 14px;
+	padding-left: 30px;
+	border-radius: 10px;
+}
+
+.right-sidebar .trending hr {
+	border: none;
+	border-top: 1px solid #c0c0c0;
+	margin: 8px 0;
+}
+
+.right-sidebar .trending p {
+	color: #333333;
+	font-size: 14px;
+}
+
+.right-sidebar .trending a.tag {
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.trending-item {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.trending-item p { margin: 0; }
+
+.footer {
+	grid-area: 3 / -3 / 4 / -2;
+	justify-items: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.footer .footer-row ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 20px;
+}
+
+.footer .footer-row ul a {
+	text-decoration: none;
+	cursor: pointer;
+	color: black;
+}
