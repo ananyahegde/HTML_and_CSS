@@ -6,15 +6,15 @@ A collection of HTML & CSS exercises completed as part of a self learning traini
 
 1. Clone the repo:
 ```bash
-   git clone https://github.com/ananyahegde/HTML_and_CSS.git
+git clone https://github.com/ananyahegde/HTML_and_CSS.git
 ```
 2. Navigate into a task folder (e.g., task-1):
 ```bash
-   cd task-1
+cd task-1
 ```
 3. Open `index.html` in your browser:
 ```bash
-   google-chrome index.html
+google-chrome index.html
 ```
 
 ## Tasks
